@@ -64,17 +64,21 @@ object GeocodeResponseConvert {
                 result += addressComponents.first { it.types?.contains("house_number") == true }.longName + " "
             }
             if (addressComponents?.firstOrNull { it.types?.contains("route") == true }?.longName != null) {
-                result += addressComponents.first { it.types?.contains("route") == true }.longName + ", "
+                result += addressComponents.first { it.types?.contains("route") == true }.longName
             }
+            result += ", "
             if (addressComponents?.firstOrNull { it.types?.contains("ward") == true }?.longName != null) {
-                result += addressComponents.first { it.types?.contains("ward") == true }.longName + ", "
+                result += addressComponents.first { it.types?.contains("ward") == true }.longName
             }
+            result += ", "
             if (addressComponents?.firstOrNull { it.types?.contains("district") == true }?.longName != null) {
-                result += addressComponents.first { it.types?.contains("district") == true }.longName + ", "
+                result += addressComponents.first { it.types?.contains("district") == true }.longName
             }
+            result += ", "
             if (addressComponents?.firstOrNull { it.types?.contains("province") == true }?.longName != null) {
-                result += addressComponents.first { it.types?.contains("province") == true }.longName + ", "
+                result += addressComponents.first { it.types?.contains("province") == true }.longName
             }
+            result += ", "
             if (addressComponents?.firstOrNull { it.types?.contains("country") == true }?.longName != null) {
                 result += addressComponents.first { it.types?.contains("country") == true }.longName
             }

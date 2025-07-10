@@ -20,7 +20,7 @@ public class TestActivity extends AppCompatActivity {
 
     private Button btCancelGeocoding;
     private CancelRequest cancelRequest;
-    private final ViettelMapApi getMapApi = new ViettelMapApi("", "");
+    private final ViettelMapApi getMapApi = new ViettelMapApi("", "", "");
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
